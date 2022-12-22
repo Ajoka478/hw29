@@ -93,7 +93,6 @@ public class Main {
         System.out.println(message);
     }
     private static void searchMoviesByName(String str) {
-        //List<Movie> list = new ArrayList<>();
         for (var movie : MOVIES){
             String name = movie.getName();
             if (movie.getName().toLowerCase().contains(str.toLowerCase())){
