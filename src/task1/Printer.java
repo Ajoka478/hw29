@@ -2,11 +2,6 @@ package task1;
 
 import java.util.List;
 
-// код можно менять только в особо отмеченном месте этого файла,
-// так же возможно вам понадобится добавить что-то в
-// блок import и поменять имя пакета
-// в остальных местах этого файла код менять не разрешается.
-
 public final class Printer {
     private static final void printHeader() {
         System.out.println(String.format("%1$10.10s | %1$3.3s | %1$-10.10s | %1$-10.10s |", "--------------"));
