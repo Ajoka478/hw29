@@ -1,11 +1,16 @@
 import task1.Cat;
 import task1.Printer;
+import task2.ActiveCat;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) {
-
+        sort();
+        makeSmth();
+    }
+    private static void sort() {
         var cats = Cat.makeCats(10);
         System.out.println("|________Before sorting___________________|");
         Printer.print(cats);
@@ -25,5 +30,16 @@ public class Main {
         System.out.println("|_After removing by name(equal to 5 chars)_|");
         cats.removeIf(cat -> cat.getName().length() == 5);
         Printer.print(cats);
+    }
+    private static void makeSmth() {
+        var cats = new ArrayList<ActiveCat>();
+        cats.add(new ActiveCat(ActiveCat::drinkMilk));
+        cats.add(new ActiveCat(() -> ActiveCat.eat()));
+        cats.add(new ActiveCat(ActiveCat::sleep));
+        cats.add(new ActiveCat(ActiveCat::play));
+        cats.add(new ActiveCat(ActiveCat::watchTV));
+        cats.add(new ActiveCat(ActiveCat::jump));
+
+        cats.forEach(ActiveCat::doAction);
     }
 }
