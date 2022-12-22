@@ -1,6 +1,6 @@
 package task2;
 
-interface Action {
+public interface Action {
     String perform();
 }
 
