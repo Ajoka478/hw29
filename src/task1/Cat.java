@@ -4,11 +4,6 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-// код можно менять только в особо отмеченном месте этого файла,
-// так же возможно вам понадобится добавить что-то в
-// блок import и поменять имя пакета
-// в остальных местах этого файла код менять не разрешается.
-
 public final class Cat {
     private static final Random r = new Random();
     private static final List<String> names = List.of("Peach", "Ginger", "Toby", "Seth", "Tibbles", "Tabby", "Poppy", "Millie", "Daisy", "Jasper", "Misty", "Minka");
